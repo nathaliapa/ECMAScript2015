@@ -1,0 +1,57 @@
+SEÇÃO 3
+
+let e const - Entendento o comportamento do var
+
+
+escopo global
+----------------------------------------------------------------------
+|                                                                     |
+|  escopo de função - Ex function(){ }                                |
+| ------------------------------------------------------------------  |
+| |                                                                |  |
+| |  escopo de bloco for() {}                                      |  |
+| |  -----------------------------------------------------         |  |
+| |  |                                                    |        |  |
+| |  |                                                    |        |  |
+| |  -----------------------------------------------------         |  |
+| |                                                                |  |
+| ------------------------------------------------------------------  |
+|                                                                     |
+| escopo de bloco - Ex: while (){}                                    |        
+|  -----------------------------------------------------              |
+| |                                                     |             |
+| | escopo de bloco - Ex: if() {}                       |             |
+| |  ----------------------------------------------     |             |
+| | |                                              |    |             |
+| | |                                              |    |             |
+| |  ----------------------------------------------     |             |
+| |                                                     |             |
+|  -----------------------------------------------------              |
+|                                                                     |
+ ---------------------------------------------------------------------
+
+* variaveis declaradas com o operador VAR são acessados pelo escopo inferiores.
+
+* variaveis declaradas com o operador VAR dentro de escopo de bloco sofrem hoisting
+(elevação) para o escopo imediatemente superior (escopo de função ou global).
+
+* variaveis declaradas dentro de um bloco de função ou num escopo de bloco dentro 
+do escopo de função não pode ser elevada para o escopo global.
+
+var = acessivel em escopo inferiores e sofrem hoisting.
+let = acessados em escopo inferiores e não sofrem hoisting.
+const = acessivel em escopo inferiores e não sofrem hoisting.
+
+* variaveis declaradas com o operador CONST não podem ter seu valor modifcado ao
+longo do processamento de script.
+
+* ao utilizar CONST colocar a variavel em MAIUSCULO pois e mais facil de 
+identifcar qual variavel não podera sofre alteração.
+ 
+*const e let não sofrem elevação quando a variavel e declarada dentro do 
+escopo de um bloco, avariavel fica amarada ao escopo.
+
+
+<!-- --> comentario em html
+/* */ comentario no script
+

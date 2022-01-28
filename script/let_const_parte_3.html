@@ -1,0 +1,94 @@
+<!--
+<html>
+    <body>
+        <script>
+
+            //escopos: global função, bloco
+
+            const SERIES = 'Numanice'
+            console.log('global:' , SERIES)
+
+            function escopoFuncao(){
+                const SERIES = 'Numanice 2'
+                console.log('função:' , SERIES)
+
+                if(true){
+                    if(true){
+                        console.log('bloco dentro da função:' , SERIES)
+
+                    }                    
+                }
+
+            }
+
+            escopoFuncao()
+            
+            {
+                console.log('bloco:' , SERIES)
+            }
+
+        </script>
+    </body>
+</html>
+
+
+
+
+<html>
+    <body>
+        <script>
+
+            //escopos: global função, bloco
+
+            
+            function escopoFuncao(){
+
+                if(true){
+                    if(true){
+                        const SERIES = 'Numanice'
+                        console.log('bloco dentro da função:' , SERIES)
+
+                    }                    
+                }
+                console.log('função:' , SERIES)
+
+            }
+
+            escopoFuncao()
+            
+            {
+                
+            }
+
+        </script>
+    </body>
+</html>
+
+-->
+
+<html>
+    <body>
+        <script>
+
+            //escopos: global função, bloco
+
+            const SERIES = 'Numanice'
+            
+            function escopoFuncao(){
+                if(true){
+                    if(true){
+
+                    }                    
+                }
+
+            }
+            SERIES = 'Numanice 2'
+            escopoFuncao()
+            
+            {
+               
+            }
+
+        </script>
+    </body>
+</html>
